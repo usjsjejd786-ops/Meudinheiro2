@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil — MeuDinheiro</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="app-shell">
+    <aside class="app-nav">
+      <div class="marca"><span class="marca-cifrao">$</span> MeuDinheiro</div>
+      <nav class="nav-links">
+        <a href="dashboard.html">Painel</a>
+        <a href="transacoes.html">Transações</a>
+        <a href="perfil.html">Perfil</a>
+      </nav>
+      <div class="nav-usuario">
+        <div class="nome-usuario" data-nome-usuario>Carregando...</div>
+        <button class="botao botao-secundario botao-bloco" data-botao-sair>Sair</button>
+      </div>
+    </aside>
+
+    <main class="app-main">
+      <div class="cabecalho-pagina">
+        <div>
+          <h1>Seu perfil</h1>
+          <p class="saudacao">Gerencie seus dados de acesso.</p>
+        </div>
+      </div>
+
+      <section class="grade-perfil">
+        <div class="painel">
+          <div class="painel-cabecalho">
+            <h2>Dados da conta</h2>
+          </div>
+
+          <div id="mensagem-dados" class="mensagem" role="alert"></div>
+
+          <form id="form-dados" novalidate>
+            <div class="campo">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" disabled />
+            </div>
+
+            <div class="campo">
+              <label for="name">Nome</label>
+              <input type="text" id="name" name="name" required />
+              <div class="erro-campo" data-erro-para="name"></div>
+            </div>
+
+            <button type="submit" class="botao botao-primario" id="botao-salvar-dados">Salvar alterações</button>
+          </form>
+        </div>
+
+        <div class="painel">
+          <div class="painel-cabecalho">
+            <h2>Alterar senha</h2>
+          </div>
+
+          <div id="mensagem-senha" class="mensagem" role="alert"></div>
+
+          <form id="form-senha" novalidate>
+            <div class="campo">
+              <label for="senhaAtual">Senha atual</label>
+              <input type="password" id="senhaAtual" name="senhaAtual" required />
+              <div class="erro-campo" data-erro-para="senhaAtual"></div>
+            </div>
+
+            <div class="campo">
+              <label for="novaSenha">Nova senha</label>
+              <input type="password" id="novaSenha" name="novaSenha" required />
+              <div class="erro-campo" data-erro-para="novaSenha"></div>
+            </div>
+
+            <div class="campo">
+              <label for="confirmarNovaSenha">Confirmar nova senha</label>
+              <input type="password" id="confirmarNovaSenha" name="confirmarNovaSenha" required />
+              <div class="erro-campo" data-erro-para="confirmarNovaSenha"></div>
+            </div>
+
+            <button type="submit" class="botao botao-primario" id="botao-salvar-senha">Atualizar senha</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="painel" style="margin-top: 24px;">
+        <div class="painel-cabecalho">
+          <h2>Sair da conta</h2>
+        </div>
+        <p>Você será desconectado deste dispositivo.</p>
+        <button class="botao botao-perigo" data-botao-sair>Sair da conta</button>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/perfil.js"></script>
+</body>
+</html>

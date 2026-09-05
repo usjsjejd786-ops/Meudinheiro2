@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Criar conta — MeuDinheiro</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="tela-auth">
+    <div class="cartao-auth">
+      <div class="marca"><span class="marca-cifrao">$</span> MeuDinheiro</div>
+      <h1>Criar sua conta</h1>
+      <p class="subtitulo-auth">Leva menos de um minuto.</p>
+
+      <div id="mensagem" class="mensagem" role="alert"></div>
+
+      <form id="form-cadastro" novalidate>
+        <div class="campo">
+          <label for="name">Nome</label>
+          <input type="text" id="name" name="name" autocomplete="name" required />
+          <div class="erro-campo" data-erro-para="name"></div>
+        </div>
+
+        <div class="campo">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" autocomplete="email" required />
+          <div class="erro-campo" data-erro-para="email"></div>
+        </div>
+
+        <div class="campo">
+          <label for="password">Senha</label>
+          <input type="password" id="password" name="password" autocomplete="new-password" required />
+          <div class="erro-campo" data-erro-para="password"></div>
+        </div>
+
+        <div class="campo">
+          <label for="confirmarSenha">Confirmar senha</label>
+          <input type="password" id="confirmarSenha" name="confirmarSenha" autocomplete="new-password" required />
+          <div class="erro-campo" data-erro-para="confirmarSenha"></div>
+        </div>
+
+        <button type="submit" class="botao botao-primario botao-bloco" id="botao-cadastro">Criar conta</button>
+      </form>
+
+      <p class="rodape-auth">
+        Já tem conta? <a class="botao-texto" href="login.html">Entrar</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/cadastro.js"></script>
+</body>
+</html>
