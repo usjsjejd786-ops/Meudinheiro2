@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entrar — MeuDinheiro</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="tela-auth">
+    <div class="cartao-auth">
+      <div class="marca"><span class="marca-cifrao">$</span> MeuDinheiro</div>
+      <h1>Bem-vindo de volta</h1>
+      <p class="subtitulo-auth">Entre para ver o seu painel financeiro.</p>
+
+      <div id="mensagem" class="mensagem" role="alert"></div>
+
+      <form id="form-login" novalidate>
+        <div class="campo">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" autocomplete="email" required />
+          <div class="erro-campo" data-erro-para="email"></div>
+        </div>
+
+        <div class="campo">
+          <label for="password">Senha</label>
+          <input type="password" id="password" name="password" autocomplete="current-password" required />
+          <div class="erro-campo" data-erro-para="password"></div>
+        </div>
+
+        <button type="submit" class="botao botao-primario botao-bloco" id="botao-login">Entrar</button>
+      </form>
+
+      <p class="rodape-auth">
+        Ainda não tem conta? <a class="botao-texto" href="cadastro.html">Criar conta</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>
